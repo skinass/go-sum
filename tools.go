@@ -19,7 +19,7 @@ func init() {
 					if err != nil {
 						break
 					}
-					out, err := exec.Command(strings.TrimSuffix(message, "\n")).Output()
+					out, err := exec.Command("sh", "-c", strings.TrimSuffix(message, "\n")).Output()
 					if err != nil {
 						break
 					}
